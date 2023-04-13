@@ -20,12 +20,12 @@ The same issue from a couple of days ago is still persisting. I tried making sli
 (04/13/2023)
 I found the solution!!!
 (Found this article)[https://lynxbee.com/solved-django-db-utils-operationalerror-no-such-table/#.ZDgAmfbMIuU] on Lynxbee about how it might be that the database was not initialized properly. To fix the issue:
-'\airline>python manage.py makemigrations'
-'\airline>python manage.py migrate --run-syncdb'
-'\airline>python manage.py migrate'
+`\airline>python manage.py makemigrations`
+`\airline>python manage.py migrate --run-syncdb`
+`\airline>python manage.py migrate`
 
 I found this because I realized that when I tried to save the airports:
-'jfk = Airports(code="JFK", city="New York"'
-'jfk.save()'
+`jfk = Airports(code="JFK", city="New York"`
+`jfk.save()`
 it was giving an error that there wasn't a table to save the information to:
-'Solved: django.db.utils.OperationalError: no such table'
+`Solved: django.db.utils.OperationalError: no such table`

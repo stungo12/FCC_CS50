@@ -16,3 +16,16 @@ ValueError: save() prohibited to prevent data loss due to unsaved related object
 
 (04/12/2023)
 The same issue from a couple of days ago is still persisting. I tried making slight adjustments to the code that might have contributed to the issue and I even tried to delete the SQLite database and migration files, then migrate everything again. That was also unsuccessfull. I will try to fix this issue one more time, otherwise I will move on with the program to keep learning. 
+
+(04/13/2023)
+I found the solution!!!
+(Found this article)[https://lynxbee.com/solved-django-db-utils-operationalerror-no-such-table/#.ZDgAmfbMIuU] on Lynxbee about how it might be that the database was not initialized properly. To fix the issue:
+'\airline>python manage.py makemigrations'
+'\airline>python manage.py migrate --run-syncdb'
+'\airline>python manage.py migrate'
+
+I found this because I realized that when I tried to save the airports:
+'jfk = Airports(code="JFK", city="New York"'
+'jfk.save()'
+it was giving an error that there wasn't a table to save the information to:
+'Solved: django.db.utils.OperationalError: no such table'

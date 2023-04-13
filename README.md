@@ -6,6 +6,10 @@ course also deals with security and using Python which are why I started it. Now
 possibility of me developing websites, as it seems like it could be quite fun, especially when you can do both front and backend development. If you want to
 check out the course for yourself, you can find the link [here](https://www.freecodecamp.org/news/learn-web-development-from-harvard-university-cs50/).
 
+I should also mention that I am running a Windows computer. This may be important as commands for Command Prompt (my terminal of choice when using Windows)
+might very well be different than if someone was using MacOS or Linux, such as the CS50 instructor using a MacOS. It's also important to know this when you
+are searching for information on the web as people may not be using the same operating system as you and so the commands might be different. Just a heads up.
+
 
 (04/10/2023)
 Ran into an issue at 6:49:53. Here, we are learning about creating a program that uses SQLite to store flight information. Basically, we have our Django/Python
@@ -35,4 +39,6 @@ I found this because I realized that when I tried to save the airports:
 
 it was giving an error that there wasn't a table to save the information to:
 
-`django.db.utils.OperationalError: no such table`.
+`django.db.utils.OperationalError: no such table`
+
+Searching this error on the internet led me to the Lynxbee website. After I put in the above commands and I tried running the program again, it worked and now I can move on to the nex problem :)

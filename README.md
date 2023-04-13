@@ -47,3 +47,16 @@ Searching this error on the internet led me to the Lynxbee website. After I put 
 Ran into my next problem. At time 6:54:17, we just created a couple HTML files so that we can access our database information from a webbrowser. This however is not working for me and several of my applications are giving me errors, where the imported django libraries and saying that they cannot be resolved at source. So, off to the web I go to search for an answer.
 
 Solved the issue. Was just a simple not putting quotation marks around `flights/layout.html` in the `index.html` file. I am still getting the not resolved errors, but the program now works on a webpage, so I am going to leave the errors (actually I think they are just warnings) for now and possibly look into it later.
+
+Ran into another error, though I think this is one we have dealt with before. I am at time 7:08:19, where we have looked at using the Admin site to change flights and airports, instead of using the command line. Then we created a new class to have passenger information. However, when I try to add a passenger through the Admin portal, it gives me an error about not having a database set up. I think this might be related to the error that flights was giving me and I should just be able to repeat the process. Insert:
+
+`\airline>python manage.py makemigrations`
+
+`\airline>python manage.py migrate --run-syncdb`
+
+`\airline>python manage.py migrate`
+
+And He scores!
+
+Might have been after I put in an extra space between `--run` and `-syncdb`, but we don't need to talk about that. Anyway, it works now, yay!
+

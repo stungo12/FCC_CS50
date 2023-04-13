@@ -42,3 +42,8 @@ it was giving an error that there wasn't a table to save the information to:
 `django.db.utils.OperationalError: no such table`
 
 Searching this error on the internet led me to the Lynxbee website. After I put in the above commands and I tried running the program again, it worked and now I can move on to the nex problem :)
+
+(04/13/2023 Sometime later)
+Ran into my next problem. At time 6:54:17, we just created a couple HTML files so that we can access our database information from a webbrowser. This however is not working for me and several of my applications are giving me errors, where the imported django libraries and saying that they cannot be resolved at source. So, off to the web I go to search for an answer.
+
+Solved the issue. Was just a simple not putting quotation marks around `flights/layout.html` in the `index.html` file. I am still getting the not resolved errors, but the program now works on a webpage, so I am going to leave the errors (actually I think they are just warnings) for now and possibly look into it later.
